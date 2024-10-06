@@ -1,2 +1,31 @@
+
 ---
-# tasks file for vertexrole
+- name: Install Nginx
+  apt:
+    name: nginx
+    state: present
+    update_cache: yes
+  become: yes
+
+- name: Ensure Nginx is running
+  service:
+    name: nginx
+    state: started
+    enabled: yes
+  become: yes
+
+- name: Set the hostname
+  hostname:
+    name: "{{ ansible_hostname }}"
+
+- name: Deploy the custom index.html
+  template:
+    src: index.html.j2
+    dest: /var/www/html/index.html
+  become: yes
+
+- name: Restart Nginx
+  service:
+    name: nginx
+    state: restarted
+  become: yes
