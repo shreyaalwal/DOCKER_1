@@ -23,6 +23,7 @@
     src: index.html.j2
     dest: /var/www/html/index.html
   become: yes
+  notify: Restart vertex
 
 - name: Restart Nginx
   service:
