@@ -1,5 +1,5 @@
 ---
-- hosts: aws_ec2_instance
+- hosts: all
   become: yes
   roles:
     - vertexrole
