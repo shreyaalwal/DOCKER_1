@@ -1,2 +1,3 @@
 ---
-# vars file for webrole
+# vars file for mywebrole
+mysqlpasswd: vertex123

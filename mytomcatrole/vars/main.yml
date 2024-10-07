@@ -1,2 +1,5 @@
 ---
-# vars file for mytomcatrole
+- name: i want to install apache2
+  apt:
+    name: apache2
+    state: present 
