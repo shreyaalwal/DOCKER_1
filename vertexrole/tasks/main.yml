@@ -16,7 +16,7 @@
 
 - name: Set the hostname
   hostname:
-    name: " ansiblemaster"
+    name: "ansiblemaster"
 
 - name: Deploy the custom index.html
   template:
